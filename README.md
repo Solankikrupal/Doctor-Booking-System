@@ -22,14 +22,11 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 ## Installation
 <ol>
 <li>Clone the repository to your local machine:
-|git clone <repository-url>.git
+`git clone <repository-url>.git`
 </li>
-Install dependencies using Composer:
-
-bash
-
-composer install
-
+<li>Install dependencies using Composer:
+`composer install`
+</li>
 Create a .env file by copying the .env.example file and updating the database configuration:
 
 bash
