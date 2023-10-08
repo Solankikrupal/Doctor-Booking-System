@@ -23,7 +23,6 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 <ol>
     
 <li>Clone the repository to your local machine:
-    <br></br>
     
 ```
     git clone <repository-url>.git    
@@ -32,7 +31,6 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 </li>
     
 <li>Install dependencies using Composer:
-    <br></br>
     
 ```
     composer install
@@ -41,7 +39,6 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 </li>
 
 <li>Create a .env file by copying the .env.example file and updating the database configuration:
-    <br></br>
     
 ``` 
     cp .env.example .env
@@ -50,7 +47,6 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 </li>
 
 <li>Update the following lines in the .env file:
-    <br></br>
     
 ```
     DB_CONNECTION=mysql
@@ -73,7 +69,6 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 <li>
 Run database migrations and seeders:
-    <br></br>
     
 ```
     php artisan migrate --seed
@@ -82,7 +77,6 @@ Run database migrations and seeders:
 </li>
 
 <li> Start the development server:
-    <br></br>
     
 ```
     php artisan serve
