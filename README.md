@@ -19,6 +19,47 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 * <b>Database:</b> MySQL or any compatible database system is used for storing user and appointment data.
 * <b>Database Seeder:</b> Seeder scripts populate the database with initial data for testing and development.
 
+##Database Schema
+
+The application uses two main tables in the database: users and appointments. Here's the schema for each table:
+
+### users Table
+
+| Column        | Type          | Description                       |
+| ---------------- |:-------------:| -------------------------------:  |
+| id               | Integer (PK)  | Unique identifier for the user.   |
+| name         	   | String	       | User's name.
+| email	           | String	       | User's email address (unique).
+| role	           | Enum	       | User's role (patient or doctor).
+| password	       | String	       | Hashed password for user security.
+| email_verified_at | Timestamp	   | Timestamp indicating email verification status.
+| remember_token	   | String	       | Laravel remember token for secure authentication.
+| created_at	       | Timestamp	   | Timestamp indicating user creation time.
+| updated_at	       | Timestamp	   | Timestamp indicating last update time.
+
+### appointments Table
+
+| Column        | Type          | Description                       |
+| ---------------- |:-------------:| -------------------------------:  |
+| id               | Integer (PK)  | Unique identifier for the user.   |
+| patient_id	    |Integer (FK)	|User ID of the patient associated with the appointment.
+| doctor_id	    |Integer (FK)	|User ID of the doctor associated with the appointment.
+| appointment_time	|DateTime	|Date and time of the appointment.
+| status	|Enum	|Status of the appointment (rsvp, approved, rejected, canceled, or postpone).
+| created_at	|Timestamp	|Timestamp indicating appointment creation time.
+| updated_at	|Timestamp	|Timestamp indicating last appointment update time.
+
+### Entity Relationships
+
+<ul>
+    <li>
+            Each appointment is associated with a patient and a doctor through the patient_id and doctor_id foreign keys in the appointments table.
+    </li>
+    <li>
+        The users table's id column is used as a foreign key in the appointments table to establish these relationships.
+    </li>
+</ul>
+
 ## Installation
 <ol>
     
