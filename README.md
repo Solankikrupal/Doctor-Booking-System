@@ -25,7 +25,7 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 <li>Clone the repository to your local machine:
     
 ```
-    git clone <repository-url>.git    
+    git clone https://github.com/Solankikrupal/Doctor-Booking-System.git
 ```
 
 </li>
