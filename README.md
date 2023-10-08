@@ -21,49 +21,47 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 ## Installation
 <ol>
+    
 <li>Clone the repository to your local machine:
 `git clone <repository-url>.git`
 </li>
+    
 <li>Install dependencies using Composer:
 `composer install`
 </li>
-Create a .env file by copying the .env.example file and updating the database configuration:
 
-bash
-
+<li>Create a .env file by copying the .env.example file and updating the database configuration:
 cp .env.example .env
+</li>
 
-Update the following lines in the .env file:
-
-env
-
+<li>Update the following lines in the .env file:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
 DB_PASSWORD=your_database_password
+</li>
 
+<li>
 Generate an application key:
-
-bash
-
 php artisan key:generate
+</li>
 
+<li>
 Run database migrations and seeders:
-
-bash
-
 php artisan migrate --seed
+</li>
 
+<li>>
 Start the development server:
 
-bash
 
     php artisan serve
 
     The application will be accessible at http://localhost:8000.
-    
+</li>
+
 </ol>
 API Documentation
 
