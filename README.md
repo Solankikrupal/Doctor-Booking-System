@@ -21,9 +21,8 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 ## Installation
 <ol>
-    <li>
-        Clone the repository to your local machine:</li>
-git clone <repository-url>.git
+<li>Clone the repository to your local machine:
+|git clone <repository-url>.git
 </li>
 Install dependencies using Composer:
 
