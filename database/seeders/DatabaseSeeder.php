@@ -22,8 +22,50 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\User::factory()->create([
-            'name' => 'Patient',
-            'email' => 'patient@example.com',
+            'name' => 'Frank will',
+            'email' => 'frwill@example.com',
+            'password' => '123456789',
+            'role' => 'patient',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Dr Joe',
+            'email' => 'docjoe@example.com',
+            'password' => '123456789',
+            'role' => 'doctor',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Natalie Port',
+            'email' => 'napa@example.com',
+            'password' => '123456789',
+            'role' => 'patient',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Dr Smith',
+            'email' => 'drsmith@example.com',
+            'password' => '123456789',
+            'role' => 'doctor',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Jimmy k',
+            'email' => 'jk@example.com',
+            'password' => '123456789',
+            'role' => 'patient',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Dr Malhotra',
+            'email' => 'drma@example.com',
+            'password' => '123456789',
+            'role' => 'doctor',
+        ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Peter pa',
+            'email' => 'pp@example.com',
             'password' => '123456789',
             'role' => 'patient',
         ]);

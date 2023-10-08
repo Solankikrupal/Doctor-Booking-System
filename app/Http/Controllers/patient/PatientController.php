@@ -10,6 +10,7 @@ use App\Models\Appointment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
 class PatientController extends Controller
@@ -19,9 +20,10 @@ class PatientController extends Controller
         try {
             $patientAppointments = Appointment::where('patient_id', auth()->user()->id);
 
-            // Filter by date if a date parameter is provided in the request
+            // Filter by date if a date parameter is provided in the request    
             if ($request->has('date')) {
-                $patientAppointments->where('appointment_time', $request->input('date'));
+                $date = Carbon::parse($request->input('date'))->startOfDay();
+                $patientAppointments->where('appointment_time', '>=', $date);
             }
 
             $appointments = $patientAppointments->get();
@@ -37,9 +39,8 @@ class PatientController extends Controller
         try {
             // Validate input
             $validator = Validator::make($request->all(), [
-                'patient_id' => 'required|exists:users,id',
                 'doctor_id' => 'required|exists:users,id',
-                'appointment_time' => 'required',
+                'appointment_time' => 'required|date_format:Y-m-d H:i|after_or_equal:',
             ]);
 
             if ($validator->fails()) {
@@ -60,7 +61,7 @@ class PatientController extends Controller
 
             // Create RSVP appointment
             $appointment = new Appointment();
-            $appointment->patient_id = $request->patient_id;
+            $appointment->patient_id = auth()->user()->id;
             $appointment->doctor_id = $request->doctor_id;
             $appointment->appointment_time = Carbon::parse($request->appointment_time);
             $appointment->status = 'rsvp'; // RSVP until doctor approves
@@ -78,7 +79,7 @@ class PatientController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'status' => 'required|in:rsvp,approved,rejected,canceled,postpone',
+                'status' => 'required|in:rsvp,rejected,canceled,postpone',
             ]);
 
             if ($validator->fails()) {
@@ -88,8 +89,10 @@ class PatientController extends Controller
                 ], 422));
             }
 
-            $appointment = Appointment::findOrFail($id);
-
+            $appointment = Appointment::where('patient_id', auth()->user()->id)->where('id', $id)->first();
+            if(!$appointment){
+                return response()->json(['message' => 'Appointment is not avaiable'], 422);    
+            }
             // Update appointment status
             $appointment->status = $request->status;
             $appointment->save();

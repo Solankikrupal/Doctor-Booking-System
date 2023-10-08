@@ -7,6 +7,7 @@ use App\Http\Resources\AppointmentCollection;
 use App\Jobs\LogMessage;
 use App\Jobs\SendAppointmentConfirmationEmail;
 use App\Models\Appointment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -20,7 +21,8 @@ class DoctorController extends Controller
 
             // Filter by date if a date parameter is provided in the request
             if ($request->has('date')) {
-                $doctorAppointments->where('appointment_time', $request->input('date'));
+                $date = Carbon::parse($request->input('date'))->startOfDay();
+                $doctorAppointments->where('appointment_time', '>=', $date);
             }
 
             $appointments = $doctorAppointments->get();
@@ -35,7 +37,7 @@ class DoctorController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'status' => 'required|in:rsvp,approved,rejected,canceled,postpone',
+                'status' => 'required|in:rsvp,approved,rejected,canceled',
             ]);
 
             if ($validator->fails()) {
@@ -45,7 +47,10 @@ class DoctorController extends Controller
                 ], 422));
             }
 
-            $appointment = Appointment::findOrFail($id);
+            $appointment = Appointment::where('doctor_id', auth()->user()->id)->where('id', $id)->first();
+            if(!$appointment){
+                return response()->json(['message' => 'Appointment is not avaiable'], 422);    
+            }
 
             // Update appointment status
             $appointment->status = $request->status;
