@@ -47,40 +47,40 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 </li>
 
 <li>Update the following lines in the .env file:
-    
-    ```
+
+```
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=your_database_name
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
-    ```
+```
 </li>
 
 <li>Generate an application key:
 
-    ```
-        php artisan key:generate
-    ```
+```
+    php artisan key:generate
+```
     
 </li>
 
 <li>
 Run database migrations and seeders:
-    
-    ```
-        php artisan migrate --seed
-    ```
+
+```
+    php artisan migrate --seed
+```
     
 </li>
 
 <li> Start the development server:
-    
-    ```
+
+```
     php artisan serve
     The application will be accessible at http://localhost:8000
-    ```
+```
     
 </li>
 
