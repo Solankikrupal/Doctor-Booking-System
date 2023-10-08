@@ -4,12 +4,12 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 ## Features
 ***
-* User Authentication: Users can register, log in, and receive authentication tokens securely.
-* Role-Based Access Control: Role-specific permissions ensure proper access control for doctors and patients.
-* Appointment Management:
-    * Patients: View existing appointments, create new appointment requests, and update appointment statuses.
-    * Doctors: View their appointments and manage appointment statuses based on availability and approval.
-* Seamless Integration: Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.
+* <b> User Authentication:</b>Users can register, log in, and receive authentication tokens securely.
+* <b> Role-Based Access Control:</b> Role-specific permissions ensure proper access control for doctors and patients.
+* <b> Appointment Management: </b>
+    * <b> Patients: </b> View existing appointments, create new appointment requests, and update appointment statuses.
+    * <b> Doctors: </b> View their appointments and manage appointment statuses based on availability and approval.
+* <b> Seamless Integration: <b> Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.
 
 ## Technologies Used
 
