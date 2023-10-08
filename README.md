@@ -1,24 +1,24 @@
-Doctor Booking System
+# Doctor Booking System
 
-Doctor Booking System is a web-based system that streamlines the scheduling and management of appointments between healthcare providers (doctors) and patients. This application offers a secure and efficient way for medical professionals and patients to coordinate their schedules, enhancing the overall healthcare experience.
+> Doctor Booking System is a web-based system that streamlines the scheduling and management of appointments between healthcare providers (doctors) and patients. This application offers a secure and efficient way for medical professionals and patients to coordinate their schedules, enhancing the overall healthcare experience.
 
-Features
+## Features
 
-User Authentication: Users can register, log in, and receive authentication tokens securely.
+`User Authentication: Users can register, log in, and receive authentication tokens securely.
 Role-Based Access Control: Role-specific permissions ensure proper access control for doctors and patients.
 Appointment Management:
     Patients: View existing appointments, create new appointment requests, and update appointment statuses.
     Doctors: View their appointments and manage appointment statuses based on availability and approval.
-Seamless Integration: Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.
+Seamless Integration: Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.`
 
-Technologies Used
+## Technologies Used
 
 Laravel: A robust PHP web framework that provides the foundation for this application.
 Sanctum: Laravel's built-in API authentication package, ensuring secure token-based authentication.
 Database: MySQL or any compatible database system is used for storing user and appointment data.
 Database Seeder: Seeder scripts populate the database with initial data for testing and development.
 
-Installation
+## Installation
 
     Clone the repository to your local machine:
 
