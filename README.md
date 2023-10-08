@@ -40,10 +40,8 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 <li>Create a .env file by copying the .env.example file and updating the database configuration:
     
-```
-    
+``` 
     cp .env.example .env
-    
 ```
 
 </li>
@@ -51,19 +49,16 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 <li>Update the following lines in the .env file:
     
     ```
-    
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=your_database_name
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
-
     ```
 </li>
 
-<li>
-Generate an application key:
+<li>Generate an application key:
 
     ```
         php artisan key:generate
@@ -75,9 +70,7 @@ Generate an application key:
 Run database migrations and seeders:
     
     ```
-    
         php artisan migrate --seed
-        
     ```
     
 </li>
@@ -85,10 +78,8 @@ Run database migrations and seeders:
 <li> Start the development server:
     
     ```
-    
     php artisan serve
     The application will be accessible at http://localhost:8000
-
     ```
     
 </li>
