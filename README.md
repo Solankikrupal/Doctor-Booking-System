@@ -88,4 +88,4 @@ Run database migrations and seeders:
 </ol>
 API Documentation
 
-For detailed information on available API endpoints and their usage, please refer to the API Documentation.
+For detailed information on available API endpoints and their usage, please refer to the [https://planetary-shuttle-18421.postman.co/workspace/New-Team-Workspace~ba89521a-dff0-42a0-9ac1-21c9a380d92e/collection/30305514-8b61207d-4d6c-4319-9e52-34eaa2600dbb?action=share&creator=30305514]API Documentation.
