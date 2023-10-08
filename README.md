@@ -20,13 +20,11 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 * <b>Database Seeder:</b> Seeder scripts populate the database with initial data for testing and development.
 
 ## Installation
-
-    Clone the repository to your local machine:
-
-    bash
-
+<ol>
+    <li>
+        Clone the repository to your local machine:</li>
 git clone <repository-url>.git
-
+</li>
 Install dependencies using Composer:
 
 bash
@@ -69,7 +67,8 @@ bash
     php artisan serve
 
     The application will be accessible at http://localhost:8000.
-
+    
+</ol>
 API Documentation
 
 For detailed information on available API endpoints and their usage, please refer to the API Documentation.
