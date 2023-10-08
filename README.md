@@ -4,7 +4,7 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 ## Features
 ***
-* <b> User Authentication:</b>Users can register, log in, and receive authentication tokens securely.
+* <b> User Authentication:</b> Users can register, log in, and receive authentication tokens securely.
 * <b> Role-Based Access Control:</b> Role-specific permissions ensure proper access control for doctors and patients.
 * <b> Appointment Management: </b>
     * <b> Patients: </b> View existing appointments, create new appointment requests, and update appointment statuses.
@@ -13,10 +13,11 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
 
 ## Technologies Used
 
-Laravel: A robust PHP web framework that provides the foundation for this application.
-Sanctum: Laravel's built-in API authentication package, ensuring secure token-based authentication.
-Database: MySQL or any compatible database system is used for storing user and appointment data.
-Database Seeder: Seeder scripts populate the database with initial data for testing and development.
+*** 
+* <b>Laravel:</b> A robust PHP web framework that provides the foundation for this application.
+* <b>Sanctum:</b> Laravel's built-in API authentication package, ensuring secure token-based authentication.
+* <b>Database:</b> MySQL or any compatible database system is used for storing user and appointment data.
+* <b>Database Seeder:</b> Seeder scripts populate the database with initial data for testing and development.
 
 ## Installation
 
