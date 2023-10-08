@@ -4,12 +4,12 @@
 
 ## Features
 
-`User Authentication: Users can register, log in, and receive authentication tokens securely.
-Role-Based Access Control: Role-specific permissions ensure proper access control for doctors and patients.
-Appointment Management:
+> User Authentication: Users can register, log in, and receive authentication tokens securely.
+> Role-Based Access Control: Role-specific permissions ensure proper access control for doctors and patients.
+> Appointment Management:
     Patients: View existing appointments, create new appointment requests, and update appointment statuses.
     Doctors: View their appointments and manage appointment statuses based on availability and approval.
-Seamless Integration: Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.`
+> Seamless Integration: Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.
 
 ## Technologies Used
 
