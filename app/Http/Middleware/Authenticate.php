@@ -14,7 +14,7 @@ class Authenticate extends Middleware
     {
 
         if (!$request->expectsJson()) {
-            return response()->json(['errors' => ['message' => 'Invalid credentials']], 401, []);
+            return route('pageNotFound');
         } else {
             return null;
         }

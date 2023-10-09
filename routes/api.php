@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/register', [AuthController::class, 'register']);
+Route::get('/404', [AuthController::class, 'pageNotFound'])->name('pageNotFound');
 Route::post('/login', [AuthController::class, 'store']);
 
 Route::middleware(['auth:sanctum'])->group(function () {

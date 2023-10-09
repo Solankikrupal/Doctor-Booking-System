@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class AuthController extends Controller
 {
@@ -42,7 +43,7 @@ class AuthController extends Controller
                         'error' => ['Invalid user role'],
                     ], 404);
                 }
-
+                PersonalAccessToken::where('tokenable_id', auth()->id())->delete();
                 // Generate token
                 $token = $user->createToken('auth-token')->plainTextToken;
 
@@ -65,5 +66,9 @@ class AuthController extends Controller
         // Revoke the user's current token
         $request->user()->tokens()->where('id', $request->user()->currentAccessToken()->id)->delete();
         return response()->json(['message' => 'Logged out successfully'], 200);
+    }
+
+    public function pageNotFound(){
+        return response()->json(['error' => 'Token is invalid'], 404);
     }
 }
