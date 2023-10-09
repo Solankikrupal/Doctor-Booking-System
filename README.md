@@ -11,6 +11,33 @@ Doctor Booking System is a web-based system that streamlines the scheduling and 
     * <b> Doctors: </b> View their appointments and manage appointment statuses based on availability and approval.
 * <b> Seamless Integration: <b> Easily integrates into existing healthcare systems, enhancing patient care and scheduling efficiency.
 
+
+## Design Patterns Used
+
+
+#### 1. Repository Pattern: 
+* The Appointment model serves as a repository, encapsulating data access logic. Methods like getAllAppointments(), createAppointment(), updateStatus(), etc., provide a clear API for interacting with the database.
+
+#### 2. Factory Pattern (via Laravel's Eloquent)
+* Eloquent ORM (Object-Relational Mapping) utilizes the Factory Pattern internally, allowing the creation of model instances and database records through a unified interface.
+
+#### 3. Dependency Injection
+* Controller methods accept instances of Request and other dependencies, making the code more testable and maintainable.
+
+#### 4. Job and Queue Pattern:
+* Asynchronous tasks are handled using Laravel's job and queue system. For example, the LogMessage job is dispatched to handle logging asynchronously.
+  
+## System Components
+
+#### 1. Patient Controller (PatientController):
+* Handles patient-related actions such as viewing appointments, scheduling new appointments, and updating appointment statuses.
+
+#### 2. Doctor Controller (DoctorController):
+* Manages doctor-specific actions including viewing appointments and updating appointment statuses for their own appointments.
+  
+#### 3. Appointment Model (Appointment):
+* Represents appointments, encapsulating database operations and business logic.
+
 ## Technologies Used
 
 *** 
